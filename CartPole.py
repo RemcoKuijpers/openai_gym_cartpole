@@ -21,8 +21,8 @@ class NN():
 		#self.create_model()
 		self.use_best_model()
 		#self.gather_data(env)
-		self.gather_data_best_model(env)
-		self.train_model()
+		#self.gather_data_best_model(env)
+		#self.train_model()
 
 	def create_model(self):
 		self.model = Sequential()
@@ -134,7 +134,7 @@ def main():
 	average_score = np.mean(scores)
 	print("Average score: {}".format(average_score))
 
-	if average_score > 490.1:
+	if average_score > 500:
 		network.model.save('keras_model')
 		print("Model saved, achieved highest score")
 
